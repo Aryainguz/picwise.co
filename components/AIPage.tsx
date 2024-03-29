@@ -13,7 +13,7 @@ const AIPage = () => {
 </div>
 
 
-    <Image src={aiIllustration} alt=''height={450} width={450}/>
+    <Image src={aiIllustration} alt='3D Laptop illustration' height={450} width={450}/>
 
     </div>
     </>

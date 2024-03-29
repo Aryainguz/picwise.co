@@ -57,7 +57,7 @@ const Dashboard: React.FC<props> = ({ children }) => {
                     width={35}
                     height={30}
                     className="mx-1"
-                    alt=""
+                    alt="PicWise Logo"
                   />
                   Pic
                   <span className="text-blue-600">Wise</span>.
@@ -87,7 +87,7 @@ const Dashboard: React.FC<props> = ({ children }) => {
                     pathname == "/dashboard" && `bg-gray-200`
                   }  flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group`}
                 >
-                  <Image src={compressImg} width={25} height={25} alt="" />
+                  <Image src={compressImg} width={25} height={25} alt="Compression Icon" />
                   <span className="mx-3">Compression</span>
                 </Link>
               </li>
@@ -98,7 +98,7 @@ const Dashboard: React.FC<props> = ({ children }) => {
                     pathname == "/dashboard/ai-enhancer" && `bg-gray-200`
                   } flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group`}
                 >
-                  <Image src={aiImg} width={25} height={25} alt="" />
+                  <Image src={aiImg} width={25} height={25} alt="AI Icon" />
                   <span className="mx-3">Compressor</span>
                   <span className="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">
                     Pro

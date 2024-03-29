@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-     <Dashboard children={<AIPage/>}/>
+     <Dashboard>
+     <AIPage/>
+     </Dashboard>
     </>
   )
 }

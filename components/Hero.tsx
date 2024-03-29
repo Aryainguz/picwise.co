@@ -28,7 +28,7 @@ const Home = () => {
                     width={35}
                     height={30}
                     className="mx-1"
-                    alt=""
+                    alt="PicWise Logo"
                   />
                   Pic
                   <span className="text-blue-600">Wise</span>.
@@ -194,8 +194,8 @@ const Home = () => {
               <div className="absolute inset-0 h-2/3 bg-gray-50" />
               <div className="relative mx-auto">
                 <div className="lg:max-w-6xl lg:mx-auto my-6">
-                <Image src={picwisedahboard} alt="" className="rounded-md hidden sm:block shadow-2xl shadow-blue-500/50" />
-                <Image src={picwisedahboardmobile} alt="" className="rounded-md block ml-4 sm:hidden shadow-2xl shadow-blue-500/50" />
+                <Image src={picwisedahboard} alt="PicWise Dashboard" className="rounded-md hidden sm:block shadow-2xl shadow-blue-500/50" />
+                <Image src={picwisedahboardmobile} alt="PicWise Mobile Dashboard" className="rounded-md block ml-4 sm:hidden shadow-2xl shadow-blue-500/50" />
                 </div>
               </div>
             </div>

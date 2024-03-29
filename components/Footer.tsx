@@ -14,7 +14,7 @@ const Footer = () => {
             href="#"
             className="flex rounded outline-none font-bold text-3xl focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
           >
-            <Image src={logo} width={35} height={30} className="mx-1" alt="" />
+            <Image src={logo} width={35} height={30} className="mx-1" alt="PicWise Logo" />
             Pic
             <span className="text-blue-600">Wise</span>.
           </a>
