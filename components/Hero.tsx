@@ -1,6 +1,10 @@
 "use client";
 import { SignInButton, SignedOut, UserButton } from "@clerk/nextjs";
 import logo from "../public/assets/image.png";
+import picwisedahboard from "../public/assets/picwise-dashboard.png";
+import picwisedahboardmobile from "../public/assets/picwise-dashboard-mobile.png";
+
+import {Play} from 'lucide-react'
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,8 +19,8 @@ const Home = () => {
           <div className="container px-4 mx-auto sm:px-6 lg:px-8">
             <div className="flex items-center justify-between">
               <div className="flex-shrink-0 p-4 sm:p-0">
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="flex rounded outline-none font-bold text-3xl focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
                 >
                   <Image
@@ -28,7 +32,7 @@ const Home = () => {
                   />
                   Pic
                   <span className="text-blue-600">Wise</span>.
-                </a>
+                </Link>
               </div>
               <div className="flex lg:hidden">
                 <button
@@ -149,7 +153,7 @@ const Home = () => {
                 Compress image size by 90% wihout
                 <span className="relative inline-flex sm:inline">
                   <span className="bg-gradient-to-r from-blue-500 to-blue-600 blur-lg filter opacity-30 w-full h-full absolute inset-0" />
-                  <span className="relative">losing much of pixels.</span>
+                  <span className="relative"> losing much of pixels.</span>
                 </span>
               </p>
               <div className="px-8 sm:items-center sm:justify-center sm:px-0 sm:space-x-5 sm:flex mt-9">
@@ -188,15 +192,13 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="pb-12 bg-white">
-            <div className="relative">
+          <div className="pb-12">
+            <div className="relative ">
               <div className="absolute inset-0 h-2/3 bg-gray-50" />
               <div className="relative mx-auto">
-                <div className="lg:max-w-6xl lg:mx-auto">
-                  {/* <img
-                    className="transform scale-110"
-                    src="https://cdn.rareblocks.xyz/collection/clarity/images/hero/2/illustration.png"
-                  /> */}
+                <div className="lg:max-w-6xl lg:mx-auto my-6">
+                <Image src={picwisedahboard} alt="" className="rounded-md hidden sm:block shadow-2xl shadow-blue-500/50" />
+                <Image src={picwisedahboardmobile} alt="" className="rounded-md block ml-4 sm:hidden shadow-2xl shadow-blue-500/50" />
                 </div>
               </div>
             </div>
