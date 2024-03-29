@@ -18,7 +18,6 @@ const Dashboard: React.FC<props> = ({ children }) => {
     sidebar?.classList.toggle("-translate-x-full");
   };
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <>
       <div>
