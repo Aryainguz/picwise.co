@@ -61,25 +61,22 @@ const Home = () => {
 
               <div className="hidden lg:flex lg:ml-16 lg:items-center lg:justify-center lg:space-x-10 xl:space-x-16">
                 <a
-                  href="#"
+                  href="#features"
                   className="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
                 >
-                  {" "}
-                  Features{" "}
+                  Features
                 </a>
                 <a
-                  href="#"
+                  href="#pricing"
                   className="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
                 >
-                  {" "}
-                  Pricing{" "}
+                  Pricing
                 </a>
                 <a
-                  href="#"
+                  href="#contribute"
                   className="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
                 >
-                  {" "}
-                  Automation{" "}
+                  Contribute
                 </a>
               </div>
               <div className="hidden lg:ml-auto lg:flex lg:items-center lg:space-x-10">
