@@ -1,8 +1,12 @@
+import Dashboard from '@/components/Dashboard'
+import DropBox from '@/components/DropBox'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>page</div>
+    <>
+    <Dashboard children={<DropBox/>}/>
+    </>
   )
 }
 
