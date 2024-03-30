@@ -162,7 +162,8 @@ const Home = () => {
                   Get Started
                 </Link>
                 <a
-                  href="#"
+                  href="https://youtu.be/TJc3oEmVGHg?si=S5rZWD1sHAIp-QAP"
+                  target="_blank"
                   className="inline-flex items-center justify-center w-full px-6 py-3 mt-4 text-lg font-bold text-gray-900 transition-all duration-200 border-2 border-gray-400 sm:w-auto sm:mt-0 rounded-xl font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-gray-200 focus:bg-gray-200"
                   role="button"
                 >
