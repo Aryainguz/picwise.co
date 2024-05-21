@@ -29,6 +29,12 @@ const DropBox = () => {
       });
       return;
     }
+    if(!files[0].type.startsWith("image/")){
+      toast.error("Only Image compression is supported in PicWise.", {
+        position: "top-right",
+      });
+      return;
+    }
     setloading(true)
     setFile(files[0]);
     setFileType(files[0].type);
