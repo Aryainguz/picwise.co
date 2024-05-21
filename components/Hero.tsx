@@ -147,7 +147,7 @@ const Home = () => {
                 Redefining Image Compression, Like Never Before.
               </h1>
               <p className="mt-5 text-4xl font-bold leading-tight text-gray-900 sm:leading-tight sm:text-5xl lg:text-5xl lg:leading-tight font-pj">
-                Compress image size by 90% wihout
+                Compress image size upto 90% wihout
                 <span className="relative inline-flex sm:inline">
                   <span className="bg-gradient-to-r from-blue-500 to-blue-600 blur-lg filter opacity-30 w-full h-full absolute inset-0" />
                   <span className="relative"> losing much of pixels.</span>
