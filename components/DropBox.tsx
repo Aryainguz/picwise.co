@@ -1,23 +1,38 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
+import { useDropzone } from "react-dropzone";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import FilePreview from "./FilePreview";
 import compressAndDownloadFile from "../utils/compressionAlgo";
+import FilePreview from "./FilePreview";
 
 const DropBox = () => {
   const [file, setFile] = useState(null);
   const [fileType, setFileType] = useState("");
   const [loading, setloading] = useState(false);
+  const [prev, setPrev] = useState("");
+
   const removeFile = () => {
     setFile(null);
     setFileType("");
   };
 
-  const onFileSelect = (file: any) => {
+  type MyDropzoneProps = {
+    onDrop: (files: File[]) => void;
+  };
+
+
+  const onDrop = (files: any) => {
+    if (files.length > 1) {
+      toast.error("Only one file is allowed to upload.", {
+        position: "top-right",
+      });
+      return;
+    }
     setloading(true)
-    setFile(file);
-    setFileType(file.type);
+    setFile(files[0]);
+    setFileType(files[0].type);
+    setPrev(URL.createObjectURL(files[0]));
     setloading(false)
   };
 
@@ -34,13 +49,18 @@ const DropBox = () => {
       });
     }
     setloading(false)
+    setFile(null);
   };
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+
 
   return (
     <>
      <h1 className="font-semibold text-gray-700 text-xl p-20 mt-2 text-center">Start <span className="text-blue-500 bg-blue-100">Uploading</span> and <span className="text-blue-500 bg-blue-100">Compressing.</span></h1>
-      <div className="flex items-center justify-center w-[300px] sm:w-[400px] lg:w-[550px] mx-auto -mt-8">
-        <ToastContainer />
+     <ToastContainer />
+
+      <div className="flex items-center justify-center w-[300px] sm:w-[400px] lg:w-[550px] mx-auto -mt-8" {...getRootProps()}>
         <label
           htmlFor="dropzone-file"
           className="flex flex-col items-center justify-center w-full h-64 border-2 border-blue-400 border-dashed rounded-lg cursor-pointer bg-blue-50"
@@ -61,24 +81,31 @@ const DropBox = () => {
                 d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
               />
             </svg>
+            {isDragActive ? (
             <p className="mb-2 p-4 sm:p-0 font-bold text-xl text-gray-500">
-              <span>Click to upload</span> or{" "}
-              <span className="text-blue-500">Drag</span> and
-              <span className="text-blue-500"> Drop</span>
-            </p>
-            <p className="text-xs text-gray-500">SVG, PNG, JPG or GIF</p>
+            <span>Drop the files here</span>
+          </p>
+            ):(
+              <>
+            <p className="mb-2 p-4 sm:p-0 font-bold text-xl text-gray-500">
+            <span>Click to upload</span> or{" "}
+            <span className="text-blue-500">Drag</span> and
+            <span className="text-blue-500"> Drop</span>
+          </p>
+          <p className="text-xs text-gray-500">SVG, PNG, JPG or GIF</p>
+          </>
+        )
+            }
           </div>
           <input
             id="dropzone-file"
-            type="file"
             className="hidden"
-            onChange={(e: React.ChangeEvent<any>) =>
-              onFileSelect(e.target.files[0])
-            }
+            {...getInputProps()}
           />
         </label>
       </div>
-      {file && <FilePreview file={file} removeFile={removeFile} />}
+    
+      {file && <FilePreview file={file} removeFile={removeFile} prev={prev}  />}
       <div className="btn flex justify-center mt-6">
         <button
           disabled={!file}
