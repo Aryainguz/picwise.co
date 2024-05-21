@@ -24,7 +24,7 @@ const DropBox = () => {
 
   const onDrop = (files: any) => {
     if (files.length > 1) {
-      toast.error("Only one file is allowed to upload.", {
+      toast.error("Please upload one image at a time.", {
         position: "top-right",
       });
       return;
