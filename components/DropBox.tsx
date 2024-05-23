@@ -85,7 +85,7 @@ const DropBox = () => {
               </p>
 
               <div
-                className="mt-6 h-64 w-full flex-col items-center justify-center rounded-lg border-2 border-dashed border-blue-500 bg-blue-50 p-4 text-blue-500 transition-colors hover:border-blue-600  dark:border-blue-700 dark:bg-blue-900 dark:text-blue-400 dark:hover:border-blue-600 dark:hover:bg-blue-800 hidden sm:flex"
+                className="mt-6 h-64 w-full flex-col items-center justify-center rounded-lg border-2 border-dashed border-blue-500 bg-blue-50 p-4 text-blue-500 transition-colors hover:border-blue-600  dark:border-blue-700 dark:bg-blue-900 dark:text-blue-400 dark:hover:border-blue-600 dark:hover:bg-blue-800 hidden xl:flex"
                 {...getRootProps()}
               >
                 <label
@@ -133,7 +133,7 @@ const DropBox = () => {
                 </label>
               </div>
 
-              <div className="flex sm:hidden mt-6 h-64 w-full flex-col items-center justify-center rounded-lg border-2 border-dashed border-blue-500 bg-blue-50 p-4 text-blue-500 transition-colors hover:border-blue-600  dark:border-blue-700 dark:bg-blue-900 dark:text-blue-400 dark:hover:border-blue-600 dark:hover:bg-blue-800">
+              <div className="flex xl:hidden mt-6 h-64 w-full flex-col items-center justify-center rounded-lg border-2 border-dashed border-blue-500 bg-blue-50 p-4 text-blue-500 transition-colors hover:border-blue-600  dark:border-blue-700 dark:bg-blue-900 dark:text-blue-400 dark:hover:border-blue-600 dark:hover:bg-blue-800">
                 <label
                   htmlFor="dropzone-file"
                   className="flex flex-col items-center justify-center w-full h-64 rounded-lg cursor-pointer bg-blue-50"
