@@ -71,7 +71,7 @@ const DropBox = () => {
                 Compress Your Images
               </h1>
               <p className="mt-2 text-gray-500 dark:text-gray-400">
-                Drag and drop your images here to compress them with PicWise's pixel perfect compression.
+                Drag and drop your images here to compress them with our pixel perfect compression.
               </p>
               <div
                 className="mt-6 flex h-64 w-full flex-col items-center justify-center rounded-lg border-2 border-dashed border-blue-500 bg-blue-50 p-4 text-blue-500 transition-colors hover:border-blue-600  dark:border-blue-700 dark:bg-blue-900 dark:text-blue-400 dark:hover:border-blue-600 dark:hover:bg-blue-800"
