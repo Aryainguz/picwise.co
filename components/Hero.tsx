@@ -81,14 +81,12 @@ const Home = () => {
               </div>
               <div className="hidden lg:ml-auto lg:flex lg:items-center lg:space-x-10">
                 <Link href="/dashboard">
-                  <SignInButton afterSignInUrl="/dashboard" mode="modal">
                     <div
                       className="inline-flex items-center justify-center px-6 py-3 text-base font-bold leading-7 text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-xl hover:bg-blue-700 font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900"
                       role="button"
                     >
                       Dashboard
                     </div>
-                  </SignInButton>
                 </Link>
               </div>
             </div>
@@ -124,7 +122,6 @@ const Home = () => {
                     Customer Login{" "}
                   </a>
                   <Link href="/dashboard">
-                    <SignInButton afterSignInUrl="/dashboard" mode="modal">
                       
                       <div
                         className="inline-flex items-center justify-center px-6 py-3 text-base font-bold leading-7 text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-xl hover:bg-blue-700 font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900"
@@ -132,7 +129,6 @@ const Home = () => {
                       >
                         Dashboard
                       </div>
-                    </SignInButton>
                   </Link>
                 </div>
               </div>
