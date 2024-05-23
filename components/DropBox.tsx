@@ -21,6 +21,7 @@ const DropBox = () => {
     onDrop: (files: File[]) => void;
   };
 
+  // for desktop
   const onDrop = (files: any) => {
     if (files.length > 1) {
       toast.error("Please upload one image at a time.", {
@@ -38,6 +39,14 @@ const DropBox = () => {
     setFile(files[0]);
     setFileType(files[0].type);
     setPrev(URL.createObjectURL(files[0]));
+    setloading(false);
+  };
+
+  // for mobile
+  const onFileSelect = (file: any) => {
+    setloading(true);
+    setFile(file);
+    setFileType(file.type);
     setloading(false);
   };
 
@@ -66,15 +75,17 @@ const DropBox = () => {
       <main className="flex-1 bg-blue-50 dark:bg-blue-950 mt-12">
         <div className="container mx-auto py-8 px-6">
           <div className="flex flex-col items-center justify-center gap-8">
-            <div className="flex w-full max-w-4xl flex-col items-center justify-center rounded-lg border border-blue-200 bg-white p-8 shadow-lg dark:border-blue-800 dark:bg-blue-900">
+            <div className="flex w-full max-w-4xl flex-col items-center justify-center rounded-lg border border-blue-200 bg-white p-8 shadow-lg dark:border-blue-800 dark:bg-blue-900 ">
               <h1 className="text-3xl font-bold text-blue-950 dark:text-white">
                 Compress Your Images
               </h1>
               <p className="mt-2 text-gray-500 dark:text-gray-400">
-                Drag and drop your images here to compress them with our pixel perfect compression.
+                Drag and drop your images here to compress them with our pixel
+                perfect compression.
               </p>
+
               <div
-                className="mt-6 flex h-64 w-full flex-col items-center justify-center rounded-lg border-2 border-dashed border-blue-500 bg-blue-50 p-4 text-blue-500 transition-colors hover:border-blue-600  dark:border-blue-700 dark:bg-blue-900 dark:text-blue-400 dark:hover:border-blue-600 dark:hover:bg-blue-800"
+                className="mt-6 h-64 w-full flex-col items-center justify-center rounded-lg border-2 border-dashed border-blue-500 bg-blue-50 p-4 text-blue-500 transition-colors hover:border-blue-600  dark:border-blue-700 dark:bg-blue-900 dark:text-blue-400 dark:hover:border-blue-600 dark:hover:bg-blue-800 hidden sm:flex"
                 {...getRootProps()}
               >
                 <label
@@ -121,9 +132,51 @@ const DropBox = () => {
                   />
                 </label>
               </div>
+
+              <div className="flex sm:hidden mt-6 h-64 w-full flex-col items-center justify-center rounded-lg border-2 border-dashed border-blue-500 bg-blue-50 p-4 text-blue-500 transition-colors hover:border-blue-600  dark:border-blue-700 dark:bg-blue-900 dark:text-blue-400 dark:hover:border-blue-600 dark:hover:bg-blue-800">
+                <label
+                  htmlFor="dropzone-file"
+                  className="flex flex-col items-center justify-center w-full h-64 rounded-lg cursor-pointer bg-blue-50"
+                >
+                  <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                    <svg
+                      className="w-8 h-8 mb-4 text-blue-500"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 20 16"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
+                      />
+                    </svg>
+                    <p className="mb-2 p-4 sm:p-0 font-bold text-xl text-gray-500">
+                      <span>Click to upload</span> or{" "}
+                      <span className="text-blue-500">Drag</span> and
+                      <span className="text-blue-500"> Drop</span>
+                    </p>
+                    <p className="text-xs text-gray-500">
+                      SVG, PNG, JPG or GIF
+                    </p>
+                  </div>
+                  <input
+                    id="dropzone-file"
+                    type="file"
+                    className="hidden"
+                    onChange={(e: React.ChangeEvent<any>) =>
+                      onFileSelect(e.target.files[0])
+                    }
+                  />
+                </label>
+              </div>
             </div>
           </div>
         </div>
+
         {file && (
           <FilePreview file={file} removeFile={removeFile} prev={prev} />
         )}
