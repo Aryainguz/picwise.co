@@ -13,12 +13,12 @@ const FilePreview:React.FC<props> = ({file,removeFile,prev}) => {
   return (
   <>
   <div className='flex justify-center'>
-  <div className="file-preview gap-4 flex text-left justify-center my-4 max-w-max border rounded-lg border-blue-200 p-2">
+  <div className="file-preview gap-4 flex text-left justify-center mb-2 max-w-max border rounded-lg border-blue-200 p-2">
   <Image 
   src={prev}
   alt="file"
-  width={100}
-  height={80}/>
+  width={50}
+  height={60}/>
   <div>
     <h2 className='font-bold text-black'>{file.name}</h2>
     <p className='text-gray-400 text-xs'>{file?.type}/{(file.size/1024/1024).toFixed(2)} MB</p>

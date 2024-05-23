@@ -108,7 +108,7 @@ const Dashboard: React.FC<props> = ({ children }) => {
             </ul>
           </div>
         </aside>
-        <div className="p-4 sm:ml-64">{children}</div>
+        <div className="p-4 sm:ml-64 bg-blue-50 dark:bg-blue-950 h-[100vh]">{children}</div>
       </div>
     </>
   );
