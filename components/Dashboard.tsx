@@ -1,12 +1,11 @@
 "use client";
 import { UserButton } from "@clerk/nextjs";
-import React, { ReactNode } from "react";
-import logo from "../public/assets/image.png";
-import compressImg from "../public/assets/compress.png";
-import aiImg from "../public/assets/ai.png";
+import { LucideLayoutDashboard, Minimize2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React, { ReactNode } from "react";
+import logo from "../public/assets/image.png";
 
 interface props {
   children: ReactNode;
@@ -57,10 +56,10 @@ const Dashboard: React.FC<props> = ({ children }) => {
                     width={35}
                     height={30}
                     className="mx-1"
-                    alt="PicWise Logo"
+                    alt="imgbetter Logo"
                   />
-                  Pic
-                  <span className="text-blue-600">Wise</span>.
+                  img
+                  <span className="text-blue-600">better</span>.
                 </Link>
               </div>
               <div className="flex items-center">
@@ -87,22 +86,19 @@ const Dashboard: React.FC<props> = ({ children }) => {
                     pathname == "/dashboard" && `bg-gray-200`
                   }  flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group`}
                 >
-                  <Image src={compressImg} width={25} height={25} alt="Compression Icon" />
-                  <span className="mx-3">Compression</span>
+                <LucideLayoutDashboard size={25} />
+                  <span className="mx-3">Dashboard</span>
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/dashboard/ai-enhancer"
+                  href="/dashboard/compression"
                   className={`${
-                    pathname == "/dashboard/ai-enhancer" && `bg-gray-200`
+                    pathname == "/dashboard/compression" && `bg-gray-200`
                   } flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group`}
                 >
-                  <Image src={aiImg} width={25} height={25} alt="AI Icon" />
+                  <Minimize2 size={25} />
                   <span className="mx-3">Compressor</span>
-                  <span className="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">
-                    Pro
-                  </span>
                 </Link>
               </li>
             </ul>

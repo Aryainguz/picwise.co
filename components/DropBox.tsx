@@ -30,7 +30,7 @@ const DropBox = () => {
       return;
     }
     if (!files[0].type.startsWith("image/")) {
-      toast.error("Only Image compression is supported in PicWise.", {
+      toast.error("Only Image compression is supported in imgbetter.", {
         position: "top-right",
       });
       return;
@@ -58,7 +58,7 @@ const DropBox = () => {
         position: "top-right",
       });
     } else {
-      toast.error("Only Image compression is supported in PicWise.", {
+      toast.error("Only Image compression is supported in imgbetter.", {
         position: "top-right",
       });
     }
@@ -77,11 +77,11 @@ const DropBox = () => {
           <div className="flex flex-col items-center justify-center gap-8">
             <div className="flex w-full max-w-4xl flex-col items-center justify-center rounded-lg border border-blue-200 bg-white p-8 shadow-lg dark:border-blue-800 dark:bg-blue-900 ">
               <h1 className="text-3xl font-bold text-blue-950 dark:text-white">
-                Compress Your Images
+                Compress Your Images Better.
               </h1>
               <p className="mt-2 text-gray-500 dark:text-gray-400">
                 Drag and drop your images here to compress them with our pixel
-                perfect compression.
+                perfect compression algorithm.
               </p>
 
               <div

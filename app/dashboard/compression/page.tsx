@@ -1,17 +1,17 @@
-import AIPage from '@/components/AIPage'
 import Dashboard from '@/components/Dashboard'
-import { Metadata } from 'next';
+import DropBox from '@/components/DropBox'
 import React from 'react'
-
+import type { Metadata } from 'next';
+ 
 export const metadata: Metadata = {
-  title: 'PicWise AI Enhancer',
+  title: 'PicWise | Compression',
 };
 
 const page = () => {
   return (
     <>
-     <Dashboard>
-     <AIPage/>
+         <Dashboard>
+     <DropBox/>
      </Dashboard>
     </>
   )

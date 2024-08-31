@@ -1,5 +1,5 @@
 {
-  "name": "picwise",
+  "name": "imgbetter",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,8 +10,13 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^4.31.0",
-    "@radix-ui/react-dropdown-menu": "^2.0.6",
-    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-dropdown-menu": "^2.1.1",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-select": "^2.1.1",
+    "@radix-ui/react-slider": "^1.2.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tooltip": "^1.1.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "compressorjs": "^1.2.1",
