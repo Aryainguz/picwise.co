@@ -1,6 +1,6 @@
-# picwise
+# PicWise.co
 
-picwise is an innovative image optimization tool built on Next.js 14, empowering users to effortlessly enhance and compress images for optimal web performance and stunning visual impact.
+PicWise is an innovative image optimization tool built on Next.js 14, empowering users to effortlessly enhance and compress images for optimal web performance and stunning visual impact.
 
 ![picwise Demo](https://github.com/Aryainguz/picwise/blob/main/public/assets/picwise-home.png)
 
