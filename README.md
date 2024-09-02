@@ -1,8 +1,8 @@
-# imgbetter
+# picwise
 
-imgbetter is an innovative image optimization tool built on Next.js 14, empowering users to effortlessly enhance and compress images for optimal web performance and stunning visual impact.
+picwise is an innovative image optimization tool built on Next.js 14, empowering users to effortlessly enhance and compress images for optimal web performance and stunning visual impact.
 
-![imgbetter Demo](https://github.com/Aryainguz/imgbetter/blob/main/public/assets/imgbetter-home.png)
+![picwise Demo](https://github.com/Aryainguz/picwise/blob/main/public/assets/picwise-home.png)
 
 ## Features
 
@@ -12,9 +12,9 @@ imgbetter is an innovative image optimization tool built on Next.js 14, empoweri
 
 ## Getting Started
 
-To get started with imgbetter, follow these steps:
+To get started with picwise, follow these steps:
 
-1. Clone this repository: `git clone https://github.com/Aryainguz/imgbetter.git`
+1. Clone this repository: `git clone https://github.com/Aryainguz/picwise.git`
 2. Install dependencies: `npm install`
 3. Run the development server: `npm run dev`
 

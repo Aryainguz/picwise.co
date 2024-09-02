@@ -6,8 +6,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "imgbetter - Free Image Compression",
-  description: "imgbetter provides free and powerful image compression tool that reduces file size without compromising much of the quality. Compress your images effortlessly with imgbetter.",
+  title: "PicWise - Free Image Compression",
+  description: "PicWise provides free and powerful image compression tool that reduces file size without compromising much of the quality. Compress your images effortlessly with picwise.",
 };
 
 export default function RootLayout({

@@ -56,10 +56,10 @@ const Dashboard: React.FC<props> = ({ children }) => {
                     width={35}
                     height={30}
                     className="mx-1"
-                    alt="imgbetter Logo"
+                    alt="picwise Logo"
                   />
-                  img
-                  <span className="text-blue-600">better</span>.
+                  Pic
+                  <span className="text-blue-600">Wise</span>.
                 </Link>
               </div>
               <div className="flex items-center">

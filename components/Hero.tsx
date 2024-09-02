@@ -1,7 +1,7 @@
 "use client";
 import logo from "../public/assets/image.png";
-import imgbetterdahboardmobile from "../public/assets/picwise-dashboard-mobile.png";
-import imgbetterdahboard from "../public/assets/picwise-dashboard.png";
+import picwisedahboardmobile from "../public/assets/picwise-dashboard-mobile.png";
+import picwisedahboard from "../public/assets/picwise-dashboard.png";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -26,10 +26,10 @@ const Home = () => {
                     width={35}
                     height={30}
                     className="mx-1"
-                    alt="imgbetter Logo"
+                    alt="picwise Logo"
                   />
-                  img
-                  <span className="text-blue-600">better</span>.
+                  Pic
+                  <span className="text-blue-600">Wise</span>.
                 </Link>
               </div>
               <div className="flex lg:hidden">
@@ -189,8 +189,8 @@ const Home = () => {
               <div className="absolute inset-0 h-2/3 bg-gray-50" />
               <div className="relative mx-auto">
                 <div className="lg:max-w-6xl lg:mx-auto my-6">
-                <Image src={imgbetterdahboard} alt="imgbetter Dashboard" className="rounded-md hidden sm:block shadow-2xl shadow-blue-500/50" />
-                <Image src={imgbetterdahboardmobile} alt="imgbetter Mobile Dashboard" className="rounded-md block ml-4 sm:hidden shadow-2xl shadow-blue-500/50" />
+                <Image src={picwisedahboard} alt="picwise Dashboard" className="rounded-md hidden sm:block shadow-2xl shadow-blue-500/50" />
+                <Image src={picwisedahboardmobile} alt="picwise Mobile Dashboard" className="rounded-md block ml-4 sm:hidden shadow-2xl shadow-blue-500/50" />
                 </div>
               </div>
             </div>

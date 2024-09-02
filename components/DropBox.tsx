@@ -30,7 +30,7 @@ const DropBox = () => {
       return;
     }
     if (!files[0].type.startsWith("image/")) {
-      toast.error("Only Image compression is supported in imgbetter.", {
+      toast.error("Only Image compression is supported in picwise.", {
         position: "top-right",
       });
       return;
@@ -58,7 +58,7 @@ const DropBox = () => {
         position: "top-right",
       });
     } else {
-      toast.error("Only Image compression is supported in imgbetter.", {
+      toast.error("Only Image compression is supported in picwise.", {
         position: "top-right",
       });
     }
