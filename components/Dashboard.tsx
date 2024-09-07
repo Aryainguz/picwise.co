@@ -79,18 +79,7 @@ const Dashboard: React.FC<props> = ({ children }) => {
         >
           <div className="h-full px-3 pb-4 overflow-y-auto bg-white ">
             <ul className="space-y-2 font-medium">
-              <li>
-                <Link
-                  href="/dashboard"
-                  className={`${
-                    pathname == "/dashboard" && `bg-gray-200`
-                  }  flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group`}
-                >
-                <LucideLayoutDashboard size={25} />
-                  <span className="mx-3">Dashboard</span>
-                </Link>
-              </li>
-              <li>
+            <li>
                 <Link
                   href="/dashboard/compression"
                   className={`${
@@ -98,7 +87,20 @@ const Dashboard: React.FC<props> = ({ children }) => {
                   } flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group`}
                 >
                   <Minimize2 size={25} />
-                  <span className="mx-3">Compressor</span>
+                  <span className="mx-3">
+                    Compressor
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/dashboard/converter"
+                  className={`${
+                    pathname == "/dashboard/converter" && `bg-gray-200`
+                  }  flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group`}
+                >
+                <LucideLayoutDashboard size={25} />
+                  <span className="mx-3">Converter</span>
                 </Link>
               </li>
             </ul>
