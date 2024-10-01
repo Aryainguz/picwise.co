@@ -16,7 +16,8 @@ To get started with picwise, follow these steps:
 
 1. Clone this repository: `git clone https://github.com/Aryainguz/picwise.git`
 2. Install dependencies: `npm install`
-3. Run the development server: `npm run dev`
+3. To obtain API keys, visit the official Clerk website, create a new application, and enable Google and Email authentication methods. Once done, copy the generated API keys and add them to your `.env.local` file, following the format provided in the `.env.example` file for correct configuration.
+4. Run the development server: `npm run dev`
 
 ## Contributing
 
