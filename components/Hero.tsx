@@ -1,15 +1,24 @@
 "use client";
+import { useState } from "react";
 import logo from "../public/assets/image.png";
 import picwisedahboardmobile from "../public/assets/picwise-dashboard-mobile.png";
 import picwisedahboard from "../public/assets/picwise-dashboard.png";
+import WatchDemoModal from "./WatchDemoModal";
 
 import Image from "next/image";
 import Link from "next/link";
 
 const Home = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
   const showMobileNav = () => {
     document.querySelector(".menu")?.classList.toggle("hidden");
   };
+
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+
   return (
     <>
       <div className="overflow-x-hidden bg-gray-50">
@@ -155,9 +164,8 @@ const Home = () => {
                 >
                   Get Started
                 </Link>
-                <a
-                  href="https://youtu.be/TJc3oEmVGHg?si=S5rZWD1sHAIp-QAP"
-                  target="_blank"
+                <button
+                  onClick={openModal}
                   className="inline-flex items-center justify-center w-full px-6 py-3 mt-4 text-lg font-bold text-gray-900 transition-all duration-200 border-2 border-gray-400 sm:w-auto sm:mt-0 rounded-xl font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 hover:bg-gray-200 focus:bg-gray-200"
                   role="button"
                 >
@@ -177,7 +185,7 @@ const Home = () => {
                     />
                   </svg>
                   Watch the demo
-                </a>
+                </button>
               </div>
               <p className="mt-8 text-base text-gray-500 font-inter">
                 Free Image Compression & Conversion.
@@ -196,6 +204,8 @@ const Home = () => {
             </div>
           </div>
         </section>
+        {/* Watch Video Modal */}
+        <WatchDemoModal isOpen={isModalOpen} onClose={closeModal} />
       </div>
     </>
   );
