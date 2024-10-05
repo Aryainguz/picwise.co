@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://picwise.co/
+
+# Sitemaps
+Sitemap: https://picwise.co/sitemap.xml
