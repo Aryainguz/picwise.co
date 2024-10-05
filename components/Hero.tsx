@@ -24,7 +24,7 @@ const Home = () => {
       <div className="overflow-x-hidden bg-gray-50">
         <header className="py-4 md:py-6">
           <div className="container px-4 mx-auto sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between relative">
               <div className="flex-shrink-0 p-4 sm:p-0">
                 <Link
                   href="/"
@@ -97,7 +97,7 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <nav className="hidden menu">
+            <nav className={`hidden menu w-screen absolute right-0 bg-white z-10 p-5  rounded-b-xl border-2`}>
               <div className="px-1 py-8">
                 <div className="grid gap-y-7">
                   <a
