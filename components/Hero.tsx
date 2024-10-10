@@ -38,7 +38,7 @@ const Home = () => {
       <div className="overflow-x-hidden bg-gray-50">
         <header className="py-4 md:py-6 relative z-50 bg-gray-50">
           <div className="container px-4 mx-auto sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between relative">
               <div className="flex-shrink-0 p-4 sm:p-0">
                 <Link
                   href="/"
@@ -130,6 +130,50 @@ const Home = () => {
                 </Link>
               </div>
             </div>
+
+            <nav className={`hidden menu w-screen absolute right-0 bg-white z-10 p-5  rounded-b-xl border-2`}>
+              <div className="px-1 py-8">
+                <div className="grid gap-y-7">
+                  <a
+                    href="#"
+                    className="flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
+                  >
+                    {" "}
+                    Features{" "}
+                  </a>
+                  <a
+                    href="#"
+                    className="flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
+                  >
+                    {" "}
+                    Pricing{" "}
+                  </a>
+                  <a
+                    href="#"
+                    className="flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
+                  >
+                    {" "}
+                    Automation{" "}
+                  </a>
+                  <a
+                    href="#"
+                    className="flex items-center p-3 -m-3 text-base font-medium text-gray-900 transition-all duration-200 rounded-xl hover:bg-gray-50 focus:outline-none font-pj focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
+                  >
+                    {" "}
+                    Customer Login{" "}
+                  </a>
+                  <Link href="/dashboard/compression">
+                      
+                      <div
+                        className="inline-flex items-center justify-center px-6 py-3 text-base font-bold leading-7 text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-xl hover:bg-blue-700 font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-900"
+                        role="button"
+                      >
+                        Dashboard
+                      </div>
+                  </Link>
+                </div>
+              </div>
+            </nav>
           </div>
         </header>
 
