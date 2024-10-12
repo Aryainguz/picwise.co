@@ -144,11 +144,11 @@ export default function Main() {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   return (
-    <div className="flex flex-col gap-4 mt-12 sm:mt-12 p-4 bg-blue-50 md:p-6">
+    <div className="flex flex-col gap-4 mt-12 sm:mt-12 p-4 bg-blue-50 md:p-6 ">
     <ToastContainer />
-    <main className="flex flex-col gap-4 sm:px-6 sm:py-0 md:gap-8">
+    <main className="flex flex-col gap-4 sm:px-6 sm:py-0 md:gap-8 dark:bg-medium">
       <div className="flex flex-col gap-4 md:grid md:grid-cols-1 lg:grid-cols-[1fr_300px]">
-        {/* Dropbox Section */}
+        
         <div className="flex flex-col items-center justify-center gap-8">
             <div className="flex w-full max-w-4xl flex-col items-center justify-center rounded-lg border border-blue-200 bg-white p-8 shadow-lg dark:border-blue-800 dark:bg-blue-900 ">
               <h1 className="text-3xl font-bold text-blue-950 dark:text-white">

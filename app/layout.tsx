@@ -13,7 +13,6 @@ export const generateMetadata = (): Metadata => {
     ogImage: encodeURI(`https://picwise.co/api/og?title=Picwise`),
   });
 };
-const metadata = generateMetadata();
 
 
 export default function RootLayout({
@@ -21,30 +20,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <ClerkProvider>
       <html lang="en">
-        <head>
-          <meta charSet="UTF-8" />
-          <meta name="theme-color" content="#ffffff" />
-          <meta name="application-name" content="Picwise" />
-          <meta name="description" content={metadata.description ?? ""} />
-          <link rel="canonical" href="https://picwise.co" />
+      
+        <body className={`${inter.className} dark:bg-medium`}>    
 
-          <meta property="og:url" content={metadata.openGraph?.url?.toString()} />
-          <meta property="og:site_name" content={metadata.openGraph?.siteName} />
-          <meta property="og:title" content={metadata.openGraph?.title?.toString()} />
-          <meta property="og:description" content={metadata.openGraph?.description} />
-          <meta property="og:locale" content={metadata.openGraph?.locale} />
-          
-          <meta name="twitter:title" content={metadata.twitter?.title as string} />
-          <meta name="twitter:description" content={metadata.twitter?.description} />
-          <meta name="twitter:creator" content={metadata.twitter?.creator} />
-        </head>
-        <body className={inter.className}>
+        
           {children}
+      
         </body>
+        
       </html>
     </ClerkProvider>
   );
