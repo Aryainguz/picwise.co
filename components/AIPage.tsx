@@ -5,9 +5,8 @@ import aiIllustration from '../public/assets/Saly-13.png'
 const AIPage = () => {
   return (
     <>
-    <div className="mt-32 sm:mt-12 p-6">
+    <div className="mt-32 sm:mt-12 p-5">
         
-
 
     </div>
     </>
