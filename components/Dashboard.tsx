@@ -19,11 +19,11 @@ const Dashboard: React.FC<props> = ({ children }) => {
   const pathname = usePathname();
   return (
     <>
-      <div>
-        <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200  ">
+      <div className="">
+        <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200  dark:bg-dark">
           <div className="px-3 py-3 lg:px-5 lg:pl-3">
             <div className="flex items-center justify-between">
-              <div className="flex items-center justify-start rtl:justify-end">
+              <div className="flex items-center justify-start rtl:justify-end ">
                 <button
                   data-drawer-target="logo-sidebar"
                   data-drawer-toggle="logo-sidebar"
@@ -74,20 +74,20 @@ const Dashboard: React.FC<props> = ({ children }) => {
         </nav>
         <aside
           id="logo-sidebar"
-          className="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0  "
+          className="fixed top-0 dark:bg-medium left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0  "
           aria-label="Sidebar"
         >
-          <div className="h-full px-3 pb-4 overflow-y-auto bg-white ">
-            <ul className="space-y-2 font-medium">
+          <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-medium">
+            <ul className="space-y-2 font-medium dark:bg-medium">
             <li>
                 <Link
                   href="/dashboard/compression"
                   className={`${
-                    pathname == "/dashboard/compression" && `bg-gray-200`
-                  } flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group`}
+                    pathname == "/dashboard/compression" && `bg-gray-200 dark:bg-gray-500`
+                  } flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 dark:hover:bg-gray-500  group`}
                 >
-                  <Minimize2 size={25} />
-                  <span className="mx-3">
+                  <Minimize2 size={25} className="dark:text-white"/>
+                  <span className="mx-3 dark:text-white">
                     Compressor
                   </span>
                 </Link>
@@ -96,17 +96,17 @@ const Dashboard: React.FC<props> = ({ children }) => {
                 <Link
                   href="/dashboard/converter"
                   className={`${
-                    pathname == "/dashboard/converter" && `bg-gray-200`
-                  }  flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group`}
+                    pathname == "/dashboard/converter" && `bg-gray-200 dark:bg-gray-500`
+                  }  flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 dark:hover:bg-gray-500  group`}
                 >
-                <LucideLayoutDashboard size={25} />
-                  <span className="mx-3">Converter</span>
+                <LucideLayoutDashboard size={25} className="dark:text-white" />
+                  <span className="mx-3 dark:text-white">Converter</span>
                 </Link>
               </li>
             </ul>
           </div>
         </aside>
-        <div className="p-4 sm:ml-64 bg-blue-50 dark:bg-blue-950 h-[100vh]">{children}</div>
+        <div className="p-4 sm:ml-64 bg-blue-50 dark:bg-blue-950 h-[100vh] ">{children}</div>
       </div>
     </>
   );
