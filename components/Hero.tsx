@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <>
       <div className="overflow-x-hidden bg-gray-50">
-        <header className="py-4 md:py-6 relative z-50 bg-gray-50">
+        <header className="fixed top-0 mb-12 inset-x-0 py-1 md:py-2  z-50 bg-gray-50 shadow-lg">
           <div className="container px-4 mx-auto sm:px-6 lg:px-8">
             <div className="flex items-center justify-between relative">
               <div className="flex-shrink-0 p-4 sm:p-0">
@@ -225,7 +225,7 @@ const Home = () => {
           </div>
         </div>
 
-        <section className="pt-12 bg-gray-50 sm:pt-16">
+        <section className="pt-12 mt-10 bg-gray-50 sm:pt-16">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center">
               <h1 className="px-6 text-lg text-gray-600 font-inter">
