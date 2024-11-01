@@ -6,6 +6,7 @@ import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { FaXTwitter, FaGithub, FaYoutube } from "react-icons/fa6";
 import { IoIosArrowUp } from "react-icons/io";
 
+
 const Footer = () => {
   const [isVisible, setIsVisible] = useState(false);
 
