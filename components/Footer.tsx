@@ -89,6 +89,19 @@ const Footer = () => {
           </div>
 
           <p className="text-sm text-muted-foreground mb-4 md:mb-0">
+          <a
+              href="https://www.producthunt.com/posts/picwise?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-picwise"
+              target="_blank"
+            >
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=456271&theme=light"
+                alt="picwise - The wise way to handle your pics | Product Hunt"
+                className="mb-4"
+                style={{ width: 250, height: 54 }}
+                width={250}
+                height={54}
+              />
+            </a>
               &copy; {new Date().getFullYear()} Build with ❤️ by <a href="https://inguzdev.co" className="font-bold text-xl">inguzdev</a>.
             </p>
         </div>
